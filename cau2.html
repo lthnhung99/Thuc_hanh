@@ -8,14 +8,14 @@
 </head>
 <body>
     <script>
-        function ktra(number, array) {
+        function check(number, array) {
             for (var i = 0; i < array.length; i++) {
                 if(number == array[i]){
                     console.log(i);
                 }
             }
         }
-        function ktraphantu(number, array){
+        function check1(number, array){
             let result = false;
             for (var i = 0; i < array.length; i++) {
                 if(number == array[i]){
@@ -25,8 +25,8 @@
             console.log(result);
         }
         let arr = [1,4,7,8,10,12];
-        ktra(4,arr);
-        ktraphantu(4,arr);
+        check(4,arr);
+        check1(4,arr);
     </script>
 
 </body>
