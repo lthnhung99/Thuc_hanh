@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bài 4: Đảo ngược mảng ban đầu</h1>
+    <script>
+        let arr = new Array(10);
+        for (i = 0; i < arr.length; i++) {
+            arr[i] = (Math.random() * (-20) + Math.random() * 30).toFixed(2);
+        }
+        console.log(arr);
+        function reverseArr(array) {
+            for (var i = 0; i < array.length / 2; i++) {
+                let temp = array[i];
+                array[i] = array[array.length - 1 - i];
+                array[array.length - 1 - i] = temp;
+            }
+            return array;
+        }
+        console.log(reverseArr(arr));
+    </script>
+</body>
+
+</html>

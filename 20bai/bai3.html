@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bài 3: Đưa các số chia hết cho 3 về đầu mảng</h1>
+    <script>
+        let arr = new Array(10);
+        for (i = 0; i < arr.length; i++) {
+            arr[i] = Number(Math.ceil(Math.random() * 30));
+        }
+        console.log(arr);
+        function divisible(array) {
+            let count = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] % 3 == 0) {
+                    let temp = array[i];
+                    array[i] = array[count];
+                    array[count] = temp;
+                    count++;
+                }
+            }
+            return array;
+        }
+        console.log(divisible(arr));
+    </script>
+</body>
+
+</html>

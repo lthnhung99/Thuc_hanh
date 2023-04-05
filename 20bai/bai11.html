@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bài 11: Kiểm tra mảng có đối xứng không? Có trả về 1, không có trả về 0</h1>
+    <script>
+        let arr = new Array(10);
+        for (i = 0; i < arr.length; i++) {
+            arr[i] = Math.ceil(Math.random() * (-20) + Math.random() * 30);
+        }
+        console.log(arr);
+        function symmetry(array) {
+            let count = 1;
+            for (var i = 0; i < array.length / 2; i++) {
+                if (array[i] != array[array.length - 1 - i]) {
+                    count = 0;
+                    break;
+                }
+            }
+            return count;
+        }
+        let arr2 = [1, 2, 3, 4, 5, 6, 7, 8];
+        console.log(symmetry(arr2));
+    </script>
+
+</body>
+
+</html>

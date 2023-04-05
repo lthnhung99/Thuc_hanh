@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bài 12: Kiểm tra mảng có tăng dần hay không</h1>
+    <script>
+        let arr = new Array(10);
+        for (let i= 0; i<arr.length;i++) {
+            arr[i]=Math.ceil(Math.random()*(-20) + Math.random()*30);
+        }
+        document.write(arr);
+        function ascending(array) {
+            let ascending = true;
+            for (let i=1;i<array.length;i++) {
+                if(Number(array[i] - Number(array[i-1]<0))) {
+                    isAscend = false;
+                }
+            }
+            return ascending;
+        }
+        let arr1 = [2,4,6,8,16,10,12,14,16];
+        document.write(ascending(arr1))
+    </script>
+</body>
+</html>
